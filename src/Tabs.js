@@ -5,8 +5,9 @@ import Simple from "./examples/1-simple";
 import Stateful from "./examples/2-stateful";
 import Memo from "./examples/3-memo";
 import Siblings from "./examples/4-siblings";
+import MemoWithProps from "./examples/5-memo-with-props";
 
-const tabs = { Simple, Stateful, Memo, Siblings };
+const tabs = { Simple, Stateful, Memo, Siblings, "Memo With Props": MemoWithProps };
 
 export default () => (
   <Tabs>
