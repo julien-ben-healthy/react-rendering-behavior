@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const WAIT = 120;
+const WAIT = 200;
 
 const redFlash = (ref, cb) => {
   ref.current.classList.add("red");

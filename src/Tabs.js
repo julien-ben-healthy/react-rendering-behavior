@@ -4,8 +4,9 @@ import "react-tabs/style/react-tabs.css";
 import Simple from "./examples/1-simple";
 import Stateful from "./examples/2-stateful";
 import Memo from "./examples/3-memo";
+import Siblings from "./examples/4-siblings";
 
-const tabs = { Simple, Stateful, Memo };
+const tabs = { Simple, Stateful, Memo, Siblings };
 
 export default () => (
   <Tabs>

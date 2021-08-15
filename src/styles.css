@@ -1,4 +1,9 @@
-h2,
+html,
+body {
+  font-family: sans-serif;
+}
+
+h3,
 p {
   padding: 0;
   margin: 0 0 10px;
@@ -10,8 +15,7 @@ button {
 
 .box {
   padding: 10px;
-  font-family: sans-serif;
-  border: 1px solid blue;
+  border: 2px solid blue;
   border-radius: 10px;
   max-width: 600px;
   margin: 0 auto;
@@ -19,4 +23,10 @@ button {
 
 .red {
   border-color: red;
+}
+
+.siblings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
 }

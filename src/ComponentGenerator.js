@@ -1,12 +1,12 @@
-import { useState, memo } from "react";
-import { useRedRender } from "./useRedRender";
-import "./styles.css";
+import { useState, memo } from 'react';
+import { useRedRender } from './useRedRender';
+import './styles.css';
 
 export const ComponentGenerator = ({
   name,
   withState = false,
+  withMemo = false,
   Child = false,
-  withMemo = false
 }) => {
   const fullName = withMemo ? `memo(${name})` : name;
 
@@ -18,7 +18,7 @@ export const ComponentGenerator = ({
 
     return (
       <div className="box" ref={ref}>
-        <h2>{fullName}</h2>
+        <h3>{fullName}</h3>
         {withState && (
           <>
             <p>State: {num}</p>
@@ -26,8 +26,17 @@ export const ComponentGenerator = ({
               Update state
             </button>
           </>
-        )}{" "}
-        {Child && <Child />}
+        )}
+        {Child &&
+          (Array.isArray(Child) ? (
+            <div className="siblings">
+              {Child.map((RenderMe, i) => (
+                <RenderMe key={i} />
+              ))}
+            </div>
+          ) : (
+            <Child />
+          ))}
       </div>
     );
   };
