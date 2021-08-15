@@ -12,8 +12,8 @@ const tabs = { Simple, Stateful, Memo, Siblings, "Memo With Props": MemoWithProp
 export default () => (
   <Tabs>
     <TabList>
-      {Object.keys(tabs).map((name) => (
-        <Tab key={name}>{name}</Tab>
+      {Object.keys(tabs).map((name, index) => (
+        <Tab key={name}>{index + 1}. {name}</Tab>
       ))}
     </TabList>
     {Object.entries(tabs).map(([name, Component]) => (
